@@ -1,54 +1,93 @@
 import React from 'react';
 import BlogCard from '../../../Home/components/LatestBlog/components/BlogCard/BlogCard';
 import { API_URL } from '../../../../../../utils/constants';
-import  './BlogList.module.css';
+import  styles from'./BlogList.module.css';
 import { Link }  from "react-router-dom"
 import Markdown from "react-markdown"
-import AllPosts from "../../../../../../posts.json"
+import postlist from "../../../../../../posts.json"
 
 export default function BlogList(props) {
 
-  
-  return (
-    <div className="featuredPostsContainer">
-        <BlogCard>
-            <div className="featuredPostsHeader">
-                <span>Recetas Destacadas</span>
-            </div>
-        </BlogCard>
-        <br></br>
-        <div className="featuredPosts">
-            {AllPosts.length &&
-                AllPosts.map((post, i) => {
-                    if (post.featured.trim() === 'true') {
-                        return (
-                            <BlogCard key={i} className="postCard">
-                                <div className="featuredPostImageWrapper">
-                                    {post.image && <img className="imagefeaturedPostImage" src={post.image.trim()} alt={post.title} />}
-                                </div>
-                                <div className="postBriefing" style={{ textAlign: "center" }}>
-                                    <span>{post.type}</span>
-                                    <h1><a href={`/post/${post.id}`} className="links">{post.title}</a></h1>
-                                    {/* <h2 className="post-title"><Link className="links" to={`/post/${post.id}`}>{post.title}</Link></h2> */}
-                                    <span>Publicado el {post.date} por {post.author}</span>
-                                    {/* <small>Publicado el {post.date} por {post.author}</small> */}
-                                    {/* <hr /> */}
-                                    {/* <Markdown source={excerptList[i]} escapeHtml={false} /> */}
-                                    <div className="postLink"><a href={`/post/${post.id}`}>Leer más</a></div>
-                                    {/* <small><Link className="links" to={`/post/${post.id}`}>Leer Más</Link></small> */}
-                                    <hr></hr>
-                                </div>
-                            </BlogCard>
-                        )
-                    } else {
-                        return null
-                    }
+  const excerptList = postlist.map(post => {
+    return post.content.split(" ").slice(0, 20).join(" ") + "..."
+})
+return (
+    <div className={styles.container}>
+       <div className={styles.wrapper}>
+      <h1>Blogs</h1>
+        {postlist.length && 
+            postlist.map((post, i) => {
+                return (
+                    <div key={i} className={styles.wrapper}>
+                         <div className={styles.blogList}>
+                            {post.thumbnail && <img className={styles.imagefeaturedPostImage}width={80} src={post.thumbnail} alt=""/> }
+                            <h1 className="post-title"><Link className="links" to={`/post/${post.id}`}>{post.title}</Link></h1>
+                            <span>{post.type}</span>
+                        </div>
+                        <hr/>
+                        <Markdown source={excerptList[i]} escapeHtml={false} />
+                        <small>Published on {post.date} by {post.author}</small>
+                       
+                        <small><Link className="links" to={`/post/${post.id}`}>Read more</Link></small>
+                    </div>
+                )
+            })
+        }
+    </div>
+    </div>
+)
+}
 
-                })
-            }
-        </div>
-        </div>
-    );
+
+
+
+
+
+
+
+
+
+
+  // return (
+  //   <div className="featuredPostsContainer">
+  //       <BlogCard>
+  //           <div className="featuredPostsHeader">
+  //               <span>Recetas Destacadas</span>
+  //           </div>
+  //       </BlogCard>
+  //       <br></br>
+  //       <div className="featuredPosts">
+  //           {AllPosts.length &&
+  //               AllPosts.map((post, i) => {
+  //                   if (post.featured.trim() === 'true') {
+  //                       return (
+  //                           <BlogCard key={i} className="postCard">
+  //                               <div className="featuredPostImageWrapper">
+  //                                   {post.image && <img className="imagefeaturedPostImage" src={post.image.trim()} alt={post.title} />}
+  //                               </div>
+  //                               <div className="postBriefing" style={{ textAlign: "center" }}>
+  //                                   <span>{post.type}</span>
+  //                                   <h1><a href={`/post/${post.id}`} className="links">{post.title}</a></h1>
+  //                                    <h2 className="post-title"><Link className="links" to={`/post/${post.id}`}>{post.title}</Link></h2> 
+  //                                   <span>Publicado el {post.date} por {post.author}</span>
+  //                                   {/* <small>Publicado el {post.date} por {post.author}</small> */}
+  //                                   {/* <hr /> */}
+  //                                   <Markdown source={AllPosts [i]} escapeHtml={false} /> 
+  //                                   <div className="postLink"><a href={`/post/${post.id}`}>Leer más</a></div>
+  //                                    <small><Link className="links" to={`/post/${post.id}`}>Leer Más</Link></small> 
+  //                                   <hr></hr>
+  //                               </div>
+  //                           </BlogCard>
+  //                       )
+  //                   } else {
+  //                       return null
+  //                   }
+
+  //               })
+  //           }
+  //       </div>
+  //       </div>
+  //   );
 
 
 
@@ -128,4 +167,4 @@ export default function BlogList(props) {
 //       </div>
     
 //   );
- }
+ //}

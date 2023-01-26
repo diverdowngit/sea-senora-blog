@@ -6,7 +6,7 @@
 .featuredPostsHeader {
   /* text-transform: uppercase; */
   font-family: 'Dawning of a New Day';
-  font-size: 4rem;
+  font-size: 6rem;
   /* font-weight: 400; */
   line-height: 3.5rem;
   text-align: center;
@@ -22,22 +22,22 @@
 }
 
 .featuredPostImageWrapper {
-  overflow: hidden;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .featuredPostImageWrapper img {
-  width: 100%;
+  width: 50%;
   max-height: 100%;
   object-fit: cover;
 }
 
 .postBriefing h1, .postBriefing span {
-  font-family: 'Dawning of a New Day';
-  padding-right: 1rem;
-  padding-left: 1rem;
-  line-height: 2.2rem;
-  margin: 0 0 10px;
+  
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 .postBriefing h1 {
@@ -94,9 +94,9 @@
       /* margin-top: 20px; */
       margin-bottom: -5px;
   }
-  /* .postBriefing h1 {
+  / .postBriefing h1 {
       font-size: 2rem;
-  } */
+  } 
 }
 
 
@@ -108,7 +108,7 @@
 
 
 
-/* .container {
+ .container {
   padding: 14rem 1.6rem;
   color: #333;
 }
@@ -124,14 +124,14 @@
   object-fit: cover;
 }
 .wrapper {
-  composes: container from '../../../../../../styles/layout.module.css';
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .wrapper > h1 {
-  font-size: 4rem;
+  font-size: 10rem;
   font-weight: 400;
 }
 
@@ -140,7 +140,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 50%;
   gap: 4rem;
 }
 
@@ -151,4 +151,4 @@
   border-radius: 50px;
   font-size: 1.6rem;
   cursor: pointer;
-} */
+} 

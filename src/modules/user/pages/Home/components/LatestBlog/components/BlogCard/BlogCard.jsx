@@ -6,19 +6,12 @@ import postlist from "../../../../../../../../posts.json"
 import  "./BlogCard.module.css"
 
 const BlogCard = (props) => {
-   
-    return (
-       
-             
+  return (
     <div className="card" style={{ width: props.width ? props.width : '100%' }} {...props}>
       {props.children}
     </div>
   )
 
-
-
-        
-    
 }
 
 export default BlogCard

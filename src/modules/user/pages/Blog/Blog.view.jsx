@@ -5,7 +5,7 @@ import Layout from "../../components/Layout/Layout";
 import Hero from "../Home/components/Hero/Hero";
 import BlogList from "./components/BlogList/BlogList";
 
-export default function BlogView() {
+export default function BlogView(props) {
   //  const [blogList, setBlogList] = React.useState([]);
 
   //   React.useEffect(() => {

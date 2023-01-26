@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   AiOutlineInstagram,
-  AiOutlineTwitter,
-  AiOutlineSearch,
   AiOutlineYoutube,
 } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
@@ -95,9 +93,9 @@ export default function Navbar() {
           </div>
         </div>
         <div className={styles.social}>
-        <a href="https://www.instagram.com/svseasenora/"target="_blank" rel="noreferrer" ><AiOutlineInstagram /></a>
-            <a href="https://www.youtube.com/channel/UCpaA07tlk3PA44WApp8oKDw"target="_blank" rel="noreferrer" ><AiOutlineYoutube /></a> 
-            <a href="https://www.facebook.com/profile.php?id=100085674495009" target="_blank" rel="noreferrer" ><FaFacebookF /></a>
+        <a href="https://www.instagram.com/svseasenora/"target="_blank"  rel="noopener noreferrer"><AiOutlineInstagram /></a>
+            <a href="https://www.youtube.com/channel/UCpaA07tlk3PA44WApp8oKDw"target="_blank"  rel="noopener noreferrer"><AiOutlineYoutube /></a> 
+            <a href="https://www.facebook.com/profile.php?id=100085674495009" target="_blank"  rel="noopener noreferrer"><FaFacebookF /></a>
           <div className={styles.searchbox}>
 
 
