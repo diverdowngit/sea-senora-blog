@@ -20,12 +20,13 @@ return (
                 return (
                     <div key={i} className={styles.wrapper}>
                          <div className={styles.blogList}>
-                            {post.thumbnail && <img className={styles.imagefeaturedPostImage}width={80} src={post.thumbnail} alt=""/> }
+                            {post.thumbnail && <img className={styles.imagefeaturedPostImage}width={100} src={post.thumbnail} alt=""/> }
                             <h1 className="post-title"><Link className="links" to={`/post/${post.id}`}>{post.title}</Link></h1>
-                            <span>{post.type}</span>
+                        
                         </div>
                         <hr/>
                         <Markdown source={excerptList[i]} escapeHtml={false} />
+                        <h2>{post.descpiption}</h2>
                         <small>Published on {post.date} by {post.author}</small>
                        
                         <small><Link className="links" to={`/post/${post.id}`}>Read more</Link></small>
