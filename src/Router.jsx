@@ -19,7 +19,7 @@ export default function Router() {
       <Switch>
         <Route exact path='/' component={UserHomePage} />
         <Route exact path='/explore' component={ExplorePage} />
-        <Route exact path='/blog' component={BlogPage} />
+        <Route exact path='/blog' component={BlogPage} render={props => <BlogPage {...props} />} />
         <Route exact path='/blog/:id' component={BlogDetailsPage}render={props => <BlogDetailsPage {...props} />} /> 
         <Route exact path='/about' component={AboutPage} /> 
         <Route exact path='/photogallery' component={PhotoGallery} />
