@@ -26,7 +26,7 @@ return (
                         </div>
                         <hr/>
                         <Markdown source={excerptList[i]} escapeHtml={false} />
-                        <h2>{post.descpiption}</h2>
+                        <h2>{post.descpipti}</h2>
                         <small>Published on {post.date} by {post.author}</small>
                        
                         <small><Link className="links" to={`/post/${post.id}`}>Read more</Link></small>

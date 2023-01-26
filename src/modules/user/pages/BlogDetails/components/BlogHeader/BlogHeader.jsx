@@ -3,9 +3,9 @@ import React from "react";
 import styles from "./BlogHeader.module.css";
 
 export default function BlogHeader({
-  title,
+  title = "Happy Reading",
   location,
-  image = "https://anywhereweroam.com/wp-content/uploads/2022/02/anywhere_we_roam_road.jpg",
+  image = "https://cdn.pixabay.com/photo/2019/10/29/09/20/summer-4586497_1280.jpg",
 }) {
   return (
     <div className={styles.heroWrapper}>

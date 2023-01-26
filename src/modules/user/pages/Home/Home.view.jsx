@@ -38,7 +38,7 @@ export default function HomePageView({ children }) {
       {/* <VideoHome centerText="Plan Your Next Adventure" location="Parisian Bridge, Paris, France" /> */}
        <EWV /> 
       {/* <PopularPlaces /> */}
-      <LatestBlog data={blogList}/>
+      {/* <LatestBlog data={blogList}/> */}
       {/* <PhotoGallery />  */}
       {/* <SummerCards /> */}
     

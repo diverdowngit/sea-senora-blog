@@ -7,6 +7,7 @@ import { BlogDetailsPage } from './modules/user/pages/BlogDetails';
 import { ExplorePage } from './modules/user/pages/Explore';
  import { UserHomePage } from './modules/user/pages/Home';
  import { Keepafloat } from './modules/user/pages/Keepafloat';
+ import Post from './modules/user/pages/Post';
 // import { LoginPage } from './modules/user/pages/Login';
 // import { AdminHome } from './modules/admin/pages/Home';
 // import { AdminCreateBlogPage } from './modules/admin/pages/CreateBlog';
@@ -21,6 +22,7 @@ export default function Router() {
         <Route exact path='/explore' component={ExplorePage} />
         <Route exact path='/blog' component={BlogPage} render={props => <BlogPage {...props} />} />
         <Route exact path='/blog/:id' component={BlogDetailsPage}render={props => <BlogDetailsPage {...props} />} /> 
+        <Route exact path="/post/:id" render={props => <Post {...props} />} />
         <Route exact path='/about' component={AboutPage} /> 
         <Route exact path='/photogallery' component={PhotoGallery} />
          <Route exact path='/keepafloat' component={Keepafloat} />
