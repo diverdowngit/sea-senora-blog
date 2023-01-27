@@ -1,41 +1,63 @@
 import React from "react"
 import { Link }  from "react-router-dom"
 import Markdown from "react-markdown"
-import postlist from "../posts.json"
+import AllPosts from "../posts.json"
 import styles from  "./postlist.module.css"
 import BlogCard from "../modules/user/pages/Home/components/LatestBlog/components/BlogCard/BlogCard"
 
 const PostList = (props) => {
-    const excerptList = postlist.map(post => {
-        return post.content.split(" ").slice(0, 20).join(" ") + "..."
-    })
-    return (
+    // const excerptList = postlist.map(post => {
+    //     return post.content.split(" ").slice(0, 20).join(" ") + "..."
+    // })
+    return ( 
         <div className={styles.container}>
-            <div className={styles.wrapper}>
+            <div className={styles.blogtitle}>
             <h1>Blogs</h1>
-            <div className={styles.postcard}>
-            {postlist.length && 
-                postlist.map((post, i) => {
+            </div>
+            <div className={styles.grid}>
+            
+            <div className={styles.card }>
+            {AllPosts.length && 
+                AllPosts.map((post, i) => {
                     return (
-                        <BlogCard key={i} className="post-card">
-                             <div className={styles.imagecontainer}>
-                                {post.thumbnail && <img className={styles.thumbnail}  src={post.thumbnail} alt={post.thumbnail}/> }</div>
-                                <div>
-                                <h2><Link className={styles.posttitle} to={`/post/${post.id}`}>{post.title}</Link></h2>
-                            </div><a>{post.intro}</a><div></div>
-                            <small>Published on {post.date}</small>
-                           
-                            <Markdown source={excerptList[i]} escapeHtml={false} />
-                            <div>
-                           <Link className={styles.readmore} to={`/post/${post.id}`}>Read more</Link>
+                        <div key={i} className={styles.card}>
+                             <div className={styles.card_img }>
+                                {post.thumbnail && <img className={styles.card_img}  src={post.thumbnail} alt={post.thumbnail}/> }</div>
+                                <div className={styles.card_body}>
+                                <h2 className={styles.card_title } href={`/post/${post.id}`} >
+                                {post.title}
+                                </h2>
+                                <p>{post.intro}</p>
+                                <a className={styles.author_link} >Published on {post.date}</a>
+                               
+                                <a className={styles.read_more}> <Link style={{ textDecoration: "none" }} to={`/post/${post.id}`}>Read more</Link></a>
+                            
                             </div>
-                            <hr/>
-                        </BlogCard>
+                        
+                        
+                         
+                            <div>
+                          
+                            </div>
+                          
+                         
+                        </div>
+                        
                     )
                 })
             }
         </div>
-        </div> </div> )
+        </div>
+         </div> 
+        
+        
+        
+        
+        
+        
+        
+        
+        ) 
 }
 
 export default PostList
