@@ -27,11 +27,13 @@ const PostList = (props) => {
                                 <h2 className={styles.card_title } href={`/post/${post.id}`} >
                                 {post.title}
                                 </h2>
+                                <div>
                                 <p>{post.intro}</p>
+                                </div>
                                 <a className={styles.author_link} >Published on {post.date}</a>
-                               
+                               <div>
                                 <a className={styles.read_more}> <Link style={{ textDecoration: "none" }} to={`/post/${post.id}`}>Read more</Link></a>
-                            
+                                </div>
                             </div>
                         
                         
