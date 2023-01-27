@@ -23,10 +23,10 @@ const PostList = (props) => {
                                 <div>
                                 <h2><Link className={styles.posttitle} to={`/post/${post.id}`}>{post.title}</Link></h2>
                             </div> 
-                            <div className={styles.imagecontainer}><span>{post.intro}</span></div>
+                            <div className={styles.imagecontainer}><Link className={styles.posttitle} to={`/post/${post.id}`}>{post.intro}</Link></div>
                             <small>Published on {post.date}</small>
                            
-                            <Markdown source={excerptList[i]} escapeHtml={false} />
+                            {/* <Markdown source={excerptList[i]} escapeHtml={false} /> */}
                             <div>
                            <Link className={styles.readmore} to={`/post/${post.id}`}>Read more</Link>
                             </div>

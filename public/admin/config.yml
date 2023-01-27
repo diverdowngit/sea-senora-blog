@@ -16,7 +16,7 @@ collections:
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Content", name: "content", widget: "markdown"}
       - {label: "Into", name: "intro", widget: "markdown"} 
   
   # - name: "comments"
