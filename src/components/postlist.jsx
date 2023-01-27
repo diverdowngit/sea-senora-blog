@@ -22,11 +22,10 @@ const PostList = (props) => {
                                 {post.thumbnail && <img className={styles.thumbnail}  src={post.thumbnail} alt={post.thumbnail}/> }</div>
                                 <div>
                                 <h2><Link className={styles.posttitle} to={`/post/${post.id}`}>{post.title}</Link></h2>
-                            </div> 
-                            <div className={styles.imagecontainer}><Link className={styles.posttitle} to={`/post/${post.id}`}>{post.intro}</Link></div>
+                            </div><a>{post.intro}</a><div></div>
                             <small>Published on {post.date}</small>
                            
-                            {/* <Markdown source={excerptList[i]} escapeHtml={false} /> */}
+                            <Markdown source={excerptList[i]} escapeHtml={false} />
                             <div>
                            <Link className={styles.readmore} to={`/post/${post.id}`}>Read more</Link>
                             </div>
