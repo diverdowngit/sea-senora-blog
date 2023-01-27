@@ -23,7 +23,7 @@ const PostList = (props) => {
                                 <div>
                                 <h2><Link className={styles.posttitle} to={`/post/${post.id}`}>{post.title}</Link></h2>
                             </div> 
-                            <div className={styles.intro}>{post.intro}</div>
+                            <div className={styles.imagecontainer}><span>{post.intro}</span></div>
                             <small>Published on {post.date}</small>
                            
                             <Markdown source={excerptList[i]} escapeHtml={false} />
