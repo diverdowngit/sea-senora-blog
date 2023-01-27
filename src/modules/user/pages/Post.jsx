@@ -20,6 +20,7 @@ const Post = (props) => {
             fetchedPost.date = post.date ? post.date : "No date given"
             fetchedPost.author = post.author ? post.author : "No author given"
             fetchedPost.content = post.content ? post.content : "No content given"
+            fetchedPost.intro = post.intro ? post.intro : "No content given"
             postExists = true
         }
     })

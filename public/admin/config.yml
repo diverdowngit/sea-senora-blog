@@ -17,6 +17,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Into", name: "intro", widget: "markdown"} 
+  
   # - name: "comments"
   #   label: "User Comments"
   #   folder: "comments" # The path to the folder where the documents are stored

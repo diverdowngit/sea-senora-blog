@@ -26,10 +26,15 @@
     justify-content: center;
 
 }
-
-.links {
+.readmore{
+    font-size: 1.5rem;
     text-decoration: none;
-    color: darkblue;
+    color: rgb(72, 72, 250);
+}
+.links {
+    font-size: 5rem;
+    text-decoration: none;
+    color: Black;
 }
 
 .layout-body {
@@ -43,30 +48,69 @@
 
 .title {
     margin-bottom: 20px;
+    text-decoration:none;
 }
 
-.post-card {
+.postcard {
     text-align: center;
    
    
     margin-bottom: 20px;
     padding: 0 20px;
 }
-.post-title {
-font-size: 5rem;
+.posttitle {
+font-size: 3rem;
 
+text-decoration: none;
+color: Black;
 
 }
 
-.img-container {
+.imgcontainer {
     width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
 
 .thumbnail {
-    padding: 10px;
+  width:65%;
+    padding: 1rem;
 }
+.container {
+    padding: 14rem 1.6rem;
+    color: #333;
+  }
+  
+  .wrapper {
+    /* composes: container from '../../../../../../styles/layout.module.css'; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .wrapper > h1 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  
+  .blogList {
+    padding: 10rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+  }
+  
+  .loadMore button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  
 @media (max-width: 600px){
     .title {  display: flex;
         flex-direction: column;
