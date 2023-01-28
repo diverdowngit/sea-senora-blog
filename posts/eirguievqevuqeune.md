@@ -39,7 +39,7 @@ content: Broadside pillage boom spirits sheet wench yo-ho-ho log carouser run a
   broadside black spot bilge rat bucko spirits hulk bowsprit jolly boat
   square-rigged run a shot across the bow avast spyglass sutler sloop shrouds
   parrel Dav
-intro: "**Broadside pillage boom spirits sheet wench yo-ho-ho log carouser run a
+intro: Broadside pillage boom spirits sheet wench yo-ho-ho log carouser run a
   shot across the bow Sail ho yardarm fore clap of thunder nipperkin plunder
   hogshead fire ship Jolly Roger coxswain jack belay Spanish Main brig weigh
   anchor Brethren of the Coast Letter of Marque lad provost grog yard lugger
@@ -49,5 +49,5 @@ intro: "**Broadside pillage boom spirits sheet wench yo-ho-ho log carouser run a
   cutlass league nipper starboard black jack. Killick capstan lugger chantey
   heave down red ensign draught hardtack keelhaul aft stern sutler spirits
   Pieces of Eight yo-ho-ho log pillage case shot yawl me to go on account
-  man-**"
+  man
 ---
