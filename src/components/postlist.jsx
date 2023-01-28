@@ -14,29 +14,31 @@ const PostList = (props) => {
             <div className={styles.blogtitle}>
             <h1>Blogs</h1>
             </div>
-            <div className={styles.grid}>
+            <div className={styles.cardsgridrow}>
             
-            <div className={styles.card }>
+            <div>
             {AllPosts.length && 
                 AllPosts.map((post, i) => {
                     return (
-                        <div key={i} className={styles.card}>
-                             <div className={styles.card_img }>
+                        <div key={i} className={styles.card } >
+                             <div className={styles.cardtop}>
                                 {post.thumbnail && <img className={styles.card_img}  src={post.thumbnail} alt={post.thumbnail}/> }</div>
-                                <div className={styles.card_body}>
-                                <h2 className={styles.card_title } href={`/post/${post.id}`} >
-                                {post.title}
-                                </h2>
-                                <div>
-                                <p>{post.intro}</p>
+                                <div >
+                                <div className={styles.cardinfo} href={`/post/${post.id}`} >
+                                <h2>{post.title}</h2>
+                                <span className={styles.date} >Published on {post.date}</span>
+                                
+                                    <p className={styles.excerpt}> 
+                                {post.intro} 
+                                </p>
                                 </div>
-                                <a className={styles.author_link} >Published on {post.date}</a>
-                               <div>
-                                <a className={styles.read_more}> <Link style={{ textDecoration: "none" }} to={`/post/${post.id}`}>Read more</Link></a>
-                                </div>
+                                <div class="cardbottom flexrow">
+        </div>
+        <div className={styles.readmore}>
+                                <a href={`/post/${post.id}`}style={{ textDecoration: "none" }} >Read more</a>
                             </div>
                         
-                        
+                            </div>
                          
                             <div>
                           
