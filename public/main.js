@@ -78,7 +78,7 @@ const getPosts = () => {
         const metadataIndices = lines.reduce(getMetadataIndices, []);
         const metadata = parseMetadata({ lines, metadataIndices });
         const content = parseContent({ lines, metadataIndices });
-        const intro = parseContent({ lines, metadataIndices });
+       
         const parsedDate = metadata.date
           ? formatDate(metadata.date)
           : new Date();
