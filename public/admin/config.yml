@@ -17,8 +17,11 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+<<<<<<< HEAD
   
   
+=======
+>>>>>>> parent of 8920834 (trying netlifly)
   # - name: "comments"
   #   label: "User Comments"
   #   folder: "comments" # The path to the folder where the documents are stored

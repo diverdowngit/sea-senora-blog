@@ -15,7 +15,6 @@ return (
     <div className={styles.container}>
        <div className={styles.wrapper}>
       <h1>Blogs</h1>
-      <div className={styles.blogList}>
         {postlist.length && 
             postlist.map((post, i) => {
                 return (
@@ -36,7 +35,7 @@ return (
             })
         }
     </div>
-    </div></div>
+    </div>
 )
 }
 
