@@ -25,12 +25,10 @@ const PostList = (props) => {
                                 {post.thumbnail && <img className={styles.card_img}  src={post.thumbnail} alt={post.thumbnail}/> }</div>
                                 <div >
                                 <div className={styles.cardinfo} href={`/post/${post.id}`} >
-                                <h2>{post.title}</h2>
+                                <h2 >{post.title}</h2>
                                 <span className={styles.date} >Published on {post.date}</span>
                                 
-                                    <p className={styles.excerpt}> 
-                                {post.intro} 
-                                </p>
+                                    <span className={styles.excerpt}href={`/post/${post.id}`}> {post.intro}</span>
                                 </div>
                                 <div class="cardbottom flexrow">
         </div>
