@@ -25,8 +25,8 @@ export default function BlogView(props) {
   return (
     <Layout>
       <Hero img="/img/train.jpg" centerText="Sv Sea Senora, " subheading="We Write Travel Blogs On The Most Stunning Locations On Earth." location="Glenfinnan Viaduct, Glenfinnan, United Kingdom"/>
-      <PostList />
-      {/* <BlogList  /> */}
+        {/* <PostList />   */}
+         <BlogList />   
     </Layout>
   );
 }
