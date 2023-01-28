@@ -78,7 +78,7 @@ const getPosts = () => {
         const metadataIndices = lines.reduce(getMetadataIndices, []);
         const metadata = parseMetadata({ lines, metadataIndices });
         const content = parseContent({ lines, metadataIndices });
-       
+        const intro = parseContent({ lines, metadataIndices });
         const parsedDate = metadata.date
           ? formatDate(metadata.date)
           : new Date();
@@ -94,7 +94,7 @@ const getPosts = () => {
           time: parsedDate["time"],
           thumbnail: metadata.thumbnail,
           content: content ? content : "No content given",
-          intro: intro ? intro : "No intro given",
+          intro: intro ? intro : "No content given",
         };
         postlist.push(post);
         ilist.push(i);
