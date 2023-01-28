@@ -67,17 +67,10 @@ const getPosts = () => {
                     }
                     return lines.join("\n")
                 }
-                const parseDescription = ({lines, metadataIndices}) => {
-                    if (metadataIndices.length > 0) {
-                        lines = lines.slice(metadataIndices[1] + 1, lines.length)
-                    }
-                    return lines.join("\n")
-                }
                 const lines = contents.split("\n")
                 const metadataIndices = lines.reduce(getMetadataIndices, [])
                 const metadata = parseMetadata({lines, metadataIndices})
                 const content = parseContent({lines, metadataIndices})
-                const description = parseDescription({lines, metadataIndices})
                 const parsedDate = metadata.date ? formatDate(metadata.date) : new Date()
                 const publishedDate = `${parsedDate["monthName"]} ${parsedDate["day"]}, ${parsedDate["year"]}`
                 const datestring = `${parsedDate["year"]}-${parsedDate["month"]}-${parsedDate["day"]}T${parsedDate["time"]}:00`
@@ -91,8 +84,6 @@ const getPosts = () => {
                     time: parsedDate["time"],
                     thumbnail: metadata.thumbnail,
                     content: content ? content : "No content given",
-                    description: description ? description : "No content given"
-                   
                 }
                 postlist.push(post)
                 ilist.push(i)
